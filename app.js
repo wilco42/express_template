@@ -10,12 +10,10 @@ app.configure(function() {
     app.set('views', __dirname + '/views');
     app.use(app.router);
     app.use(express.static(path.join(__dirname, 'public')));
-    // TODO: see if there is a better way to do this?
-    app.mongoose = mongoose;
 });
 
 // setup the routes
-require('./routes')(app);
+var routes = require('./routes')(app, mongoose);
 
 // fire up the server
 app.listen(4000);
