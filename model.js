@@ -1,6 +1,7 @@
 /**
+ * Model factory class
  * @param {object} db Mongoose object.
- * @return {object} Mongoose model.
+ * @return {object} create() method will create the model you seek.
  */
 module.exports = function(db) {
     var model = {
@@ -12,6 +13,7 @@ module.exports = function(db) {
         }
 
     };
+    // initialize this object with the DB handle
     model.db = db;
     return model;
 };
