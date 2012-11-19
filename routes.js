@@ -1,11 +1,10 @@
 /**
  * Routes
  * @param {object} app Application object.
- * @param {object} mongoose Mongoose object.
  */
-module.exports = function(app, mongoose) {
-    // include all of the routes
-    var root = require('./routes/root')(mongoose);
+module.exports = function(app) {
+    // include all of the routes as objects
+    var root = require('./routes/root');
 
     // set routes
     app.get('/', root.index);
