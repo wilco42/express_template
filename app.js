@@ -2,11 +2,9 @@ var express = require('express'),
     app = express(),
     cons = require('consolidate'),
     mongoose = require('mongoose'),
+    fs = require('fs'),
     path = require('path'),
-    model = require('./model');
-
-// setup persistent db connection
-var db = mongoose.createConnection('localhost', 'test');
+    models = require('./db')(mongoose, fs);
 
 app.configure(function() {
     app.engine('dust', cons.dust);
@@ -14,12 +12,11 @@ app.configure(function() {
     app.set('views', __dirname + '/views');
     app.use(app.router);
     app.use(express.static(path.join(__dirname, 'public')));
-    // make the creation of models globally accessible
-    app.set('model', model(db));
+    app.models = models;
 });
 
 // setup the routes
-require('./routes')(app);
+require('./routes')(app, fs);
 
 // fire up the server
 app.listen(4000);

@@ -17,11 +17,8 @@ module.exports = function(mongoose) {
 };
 
 Sample use of model in route:
-// compile models/profile.js schema into a model
-var profile = res.app.get('model').create('profile');
-
 // create a new object from the model
-var newUser = new profile({username: 'another name'});
+var newUser = res.app.models.profile({username: 'another name'});
 
 // save the object
 newUser.save();

@@ -1,14 +1,15 @@
 /**
  * Routes
  * @param {object} app Application object.
+ * @param {object} fs Node fs object.
  */
-module.exports = function(app) {
-    var fs = require('fs');
+module.exports = function(app, fs) {
     var routes = {};
     fs.readdirSync('./routes').forEach(function(file) {
         var route = file.substring(0, file.length - 3);
         routes[route] = require('./routes/' + route);
     });
+
     // set routes
     app.get('/', routes.root.index);
 
