@@ -3,11 +3,14 @@
  * @param {object} app Application object.
  */
 module.exports = function(app) {
-    // include all of the routes as objects
-    var root = require('./routes/root');
-
+    var fs = require('fs');
+    var routes = {};
+    fs.readdirSync('./routes').forEach(function(file) {
+        var route = file.substring(0, file.length - 3);
+        routes[route] = require('./routes/' + route);
+    });
     // set routes
-    app.get('/', root.index);
+    app.get('/', routes.root.index);
 
     // if nothing else matched, send a 404.
     app.use(function(req, res, next) {
