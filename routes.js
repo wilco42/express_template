@@ -1,9 +1,9 @@
+var fs = require('fs');
 /**
  * Routes
  * @param {object} app Application object.
- * @param {object} fs Node fs object.
  */
-module.exports = function(app, fs) {
+module.exports = function(app) {
     var routes = {};
     fs.readdirSync('./routes').forEach(function(file) {
         var route = file.substring(0, file.length - 3);

@@ -1,10 +1,8 @@
 var express = require('express'),
     app = express(),
     cons = require('consolidate'),
-    mongoose = require('mongoose'),
-    fs = require('fs'),
     path = require('path'),
-    models = require('./db')(mongoose, fs);
+    models = require('./db')();
 
 app.configure(function() {
     app.engine('dust', cons.dust);
@@ -16,7 +14,7 @@ app.configure(function() {
 });
 
 // setup the routes
-require('./routes')(app, fs);
+require('./routes')(app);
 
 // fire up the server
 app.listen(4000);

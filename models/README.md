@@ -1,12 +1,12 @@
 Mongoose models go here.
 
 Sample model:
+var mongoose = require('mongoose');
 /**
  * profile
- * @param {object} mongoose Mongoose.
  * @return {object} profile schema.
  */
-module.exports = function(mongoose) {
+module.exports = function() {
     return new mongoose.Schema({
         userid: Number,
         username: String,
