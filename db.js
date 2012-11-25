@@ -11,7 +11,7 @@ module.exports = function() {
     fs.readdirSync('./models').forEach(function(file) {
         if (file.indexOf('.js') !== -1) {
             var modelName = file.substring(0, file.length - 3);
-            var schema = require('./models/' + modelName)(mongoose);
+            var schema = require('./models/' + modelName);
             models[modelName] = db.model(modelName, schema);
         }
     });
