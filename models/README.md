@@ -2,19 +2,16 @@ Mongoose models go here.
 
 Sample model:
 var mongoose = require('mongoose');
-/**
- * profile
- * @return {object} profile schema.
- */
-module.exports = function() {
-    return new mongoose.Schema({
-        userid: Number,
-        username: String,
-        profileImage: String,
-        totalCollections: Number,
-        totalItems: Number
-    });
-};
+var profile = new mongoose.Schema({
+    userid: Number,
+    username: String,
+    profileImage: String,
+    totalCollections: Number,
+    totalItems: Number
+});
+
+module.exports = profile;
+
 
 Sample use of model in route:
 // create a new object from the model
