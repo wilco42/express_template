@@ -1,0 +1,6 @@
+<div class="partial">
+this is a partial loaded later! - {blah}
+{#stuff}
+{.}
+{/stuff}
+</div>

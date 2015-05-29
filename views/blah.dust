@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+<div data-module="page">
+    <hr />
+    blah.
+    <p/>
+    asdf
+    <p/>
+    {>"links"/}
+</div>
+<script src="/build/common.js"></script>
+<script src="/build/two.js"></script>
+</body>
+</html>

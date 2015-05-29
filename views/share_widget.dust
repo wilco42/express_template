@@ -1,0 +1,6 @@
+<div data-module="share-widget">
+    <i data-type="twitter" class="fa fa-twitter fa-lg"></i>
+    <i data-type="facebook" class="fa fa-facebook fa-lg"></i>
+    <i data-type="github" class="fa fa-github fa-lg"></i>
+    <i data-type="instagram" class="fa fa-instagram fa-lg"></i>
+</div>

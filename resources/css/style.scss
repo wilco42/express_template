@@ -1,0 +1,10 @@
+$body-padding: 25px;
+
+body {
+    padding: $body-padding;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+[data-module=share-widget] i {
+    padding: 10px;
+}

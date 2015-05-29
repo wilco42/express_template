@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{title}</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+</head>
+<body>
+<div data-module="page">
+    index page!    <hr />
+    {>"share_widget" /}
+    {>"share_widget" /}
+    {>"share_widget" /}
+
+
+    {! {>"dust-partial" async="true"/} !}
+    {@partial template="frag" stuff=morestuff async="true" blah="asdfasdfblah"/}
+    {@partial template="frag" stuff=stuff async="true" blah="qq3qrqwe"/}
+    {@counters/}
+
+    {>"links"/}
+</div>
+<script src="/build/common.js"></script>
+<script src="/build/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>hit here</title>
+<body>
+<div data-module="page">
+    users go here.
+    <hr/>
+    lots of user stuff should go here.
+    <p/>
+
+    {>"links"/}
+</div>
+<script src="/build/common.js"></script>
+<script src="/build/two.js"></script>
+</body>
+</html>
